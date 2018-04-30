@@ -1,0 +1,2 @@
+# after_installed_windows
+安装Windows之后的操作

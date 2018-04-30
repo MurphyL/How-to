@@ -1,9 +1,12 @@
 # 安装Windows之后的操作
 
-安装`Chrome`：
+安装`Chrome`替换`Edge`：
 
 > 下载链接： https://www.google.com/intl/zh-CN/chrome/
 
+安装`Notepad++`替换`Notepad`：
+
+> 下载链接： https://notepad-plus-plus.org/
 
 移出资源管理器中的`3D Object`库：
 

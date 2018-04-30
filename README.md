@@ -1,5 +1,10 @@
 # 安装Windows之后的操作
 
+安装`Chrome`：
+
+  https://www.google.com/intl/zh-CN/chrome/
+
+
 移出资源管理器中的`3D Object`库：
 
 ```cmd

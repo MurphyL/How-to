@@ -20,3 +20,8 @@
   REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}" /f
   exit
 ```
+
+
+##其他
+
+Office365 https://portal.office.com/

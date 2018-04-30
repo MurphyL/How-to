@@ -8,7 +8,7 @@
 
 > 下载链接： https://notepad-plus-plus.org/
 
-安装`InfanView`替换`mspaint`：
+安装`InfanView`替换`Photo`应用：
 
 > 下载链接： https://www.irfanview.com/
 

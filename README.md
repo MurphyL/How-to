@@ -8,6 +8,10 @@
 
 > 下载链接： https://notepad-plus-plus.org/
 
+安装`InfanView`替换`mspaint`：
+
+> 下载链接： https://www.irfanview.com/
+
 移出资源管理器中的`3D Object`库：
 
 ```cmd

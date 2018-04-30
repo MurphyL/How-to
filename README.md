@@ -2,7 +2,7 @@
 
 安装`Chrome`：
 
-> https://www.google.com/intl/zh-CN/chrome/
+> 下载链接： https://www.google.com/intl/zh-CN/chrome/
 
 
 移出资源管理器中的`3D Object`库：

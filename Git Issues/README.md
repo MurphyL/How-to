@@ -13,4 +13,5 @@
 
 ```shell
   rm .git/index.lock .git/index
+  git reset
 ```

@@ -7,7 +7,7 @@
 * [集合类](core-java/collections.md)
 
 ## 大数据
-
+* [Hive SQL](big-data/hive-ql.md)
 * [Hive JDBC](big-data/hive-jdbc.md)
 
 ## 操作系统

@@ -12,5 +12,5 @@
 
 ## 操作系统
 
-* [AWK & Sed](cao-zuo-xi-tong/awk-sed.md)
+* [AWK & Sed](os/awk-sed.md)
 

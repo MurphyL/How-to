@@ -20,7 +20,7 @@ jdbc:hive2://<quorum>/dbName;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=n
 
 ### 参数部分
 
-```
+```text
 initFile=<file>;sess_var_list?hive_conf_list#hive_var_list
 ```
 

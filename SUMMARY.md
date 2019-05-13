@@ -8,11 +8,11 @@
 
 ## 大数据
 
-* [Hive JDBC](da-shu-ju/hive-jdbc.md)
+* [Hive JDBC](big-data/hive-jdbc.md)
 
 ## 操作系统
 
-* [Git CLI](cao-zuo-xi-tong/git-shell.md)
-* [AWK & Sed](cao-zuo-xi-tong/awk-sed.md)
-* [Windows](cao-zuo-xi-tong/win-settings.md)
+* [Git CLI](os/git-shell.md)
+* [AWK & Sed](os/awk-sed.md)
+* [Windows](os/win-settings.md)
 

@@ -8,9 +8,9 @@
 
 ## 大数据
 
-* [Hive JDBC](big-data/hive-jdbc.md)
+* [Hive JDBC](da-shu-ju/hive-jdbc.md)
 
 ## 操作系统
 
-* [Untitled](os/untitled.md)
+* [AWK & Sed](cao-zuo-xi-tong/untitled.md)
 

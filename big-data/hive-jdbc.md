@@ -12,14 +12,9 @@ description: 使用JDBC访问Hive
 jdbc:hive2://<host1>:<port1>,<host2>:<port2>/dbName;initFile=<file>;sess_var_list?hive_conf_list#hive_var_list
 ```
 
-{% hint style="info" %}
-Super-powers are granted randomly so please submit an issue if you're not happy with yours.
-{% endhint %}
-
-Once you're strong enough, save the world:
+使用`Zookeeper HA` 连接串
 
 ```text
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
+jdbc:hive2://<zookeeper quorum>/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=zk_namespace;initFile=<file>;sess_var_list?hive_conf_list#hive_var_list
 ```
 

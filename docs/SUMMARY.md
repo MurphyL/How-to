@@ -1,7 +1,5 @@
 # Summary
 
-* [摘要](../README.md)
-
 ## Core Java
 
 * [集合类](core-java/collections.md)

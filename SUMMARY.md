@@ -8,7 +8,7 @@
 
 ## 框架
 
-* [Spring][docs/framework/spring-mvc.md]
+* [Spring](docs/framework/spring-mvc.md)
     * [Spring MVC](docs/framework/spring-mvc.md)
 
 ## 大数据

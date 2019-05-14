@@ -11,6 +11,7 @@
 * [Spring MVC](framework/spring-mvc.md)
 
 ## 大数据
+* [Hadoop CLI](big-data/hadoop-cli.md)
 * [Hive SQL](big-data/hive-ql.md)
 * [Hive JDBC](big-data/hive-jdbc.md)
 

@@ -10,13 +10,13 @@ AWK是一种优良的文本处理工具，Linux及Unix环境中现有的功能�
 
 将文件内的每一行以空格分隔，打印每一行的第五列：
 
-```text
+```shell
 awk '{print $5}' filename
 ```
 
 通过正则表达式匹配文件内的每一行，然后将行内容以空格分隔，打印每一行的第二列：
 
-```text
+```shell
 awk '/regexp/ {print $2}' filename
 
 awk '$1 ~ /regexp/ {print $2}' filename
@@ -24,7 +24,7 @@ awk '$1 ~ /regexp/ {print $2}' filename
 
 指定分隔符，输出每一行的列的数量
 
-```text
+```shell
 awk -F ',' '{print $NF}' {{filename}}
 ```
 

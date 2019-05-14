@@ -1,6 +1,6 @@
-# Table of contents
+# Summary
 
-* [Introduction](README.md)
+* [首页](README.md)
 
 ## Core Java
 
@@ -24,9 +24,7 @@
 * [AWK & Sed](os/awk-sed.md)
 * [Windows](os/win-settings.md)
 
-## DEMO
+## 其他
 
-* [Guide](demo/guide.md)
-* [API](demo/api.md)
-* [FQA](demo/fqa.md)
+* [GitBook](other/gitbook.md)
 

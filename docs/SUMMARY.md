@@ -4,7 +4,9 @@
 
 ## Core Java
 
-* [集合类](core-java/collections.md)
+* [集合](core-java/collections.md)
+* [枚举](core-java/enum.md)
+* [注解](core-java/annotation.md)
 
 ## Framework
 

@@ -8,7 +8,7 @@
 
 ## 框架
 
-* [Spring MVC](frameworl/spring-mvc.md)
+* [Spring MVC](framework/spring-mvc.md)
 
 ## 大数据
 * [Hive SQL](big-data/hive-ql.md)

@@ -5,5 +5,5 @@ structure:
   summary: ./SUMMARY.md
 
 redirects:
-  help: ./support.md
-  help/contact: ./contact.md
+  help: ./SUPPORT.md
+  help/contact: ./CONTACT.md

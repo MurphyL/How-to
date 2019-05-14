@@ -1,4 +1,5 @@
 {
     "language": "zh-CN",
-    "author": "MurphyL - murphyl@outlook.com"
+    "author": "MurphyL - murphyl@outlook.com",
+    "root": "./docs"
 }

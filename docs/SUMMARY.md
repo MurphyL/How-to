@@ -1,4 +1,6 @@
-# Summary
+# Table of contents
+
+* [Introduction](README.md)
 
 ## Core Java
 
@@ -6,14 +8,15 @@
 
 ## 框架
 
-* [Spring](framework/spring-mvc.md)
-    * [Spring MVC](framework/spring-mvc.md)
+* [Spring](framework/spring-mvc/README.md)
+  * [Spring MVC](framework/spring-mvc/spring-mvc.md)
 
 ## 大数据
+
 * [Hadoop CLI](big-data/hadoop-cli.md)
-* [Hive](big-data/hive-ql.md)
-    * [Hive SQL](big-data/hive-ql.md)
-    * [Hive JDBC](big-data/hive-jdbc.md)
+* [Hive](big-data/hive-ql/README.md)
+  * [Hive SQL](big-data/hive-ql/hive-ql.md)
+  * [Hive JDBC](big-data/hive-ql/hive-jdbc.md)
 
 ## 操作系统
 

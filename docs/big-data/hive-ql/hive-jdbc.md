@@ -2,6 +2,8 @@
 description: 使用JDBC访问Hive
 ---
 
+# Hive JDBC
+
 ## 连接串格式
 
 原生`JDBC`连接串

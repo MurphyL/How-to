@@ -24,3 +24,9 @@
 * [AWK & Sed](os/awk-sed.md)
 * [Windows](os/win-settings.md)
 
+## DEMO
+
+* [Guide](demo/guide.md)
+* [API](demo/api.md)
+* [FQA](demo/fqa.md)
+

@@ -1,5 +1,5 @@
 ---
-description: Java注解
+description: Java注解，通常配合反射来使用。
 ---
 
 ## 元注解

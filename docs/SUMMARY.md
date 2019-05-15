@@ -27,9 +27,11 @@
 
 ## Operating System
 
-* [Git CLI](os/git-shell.md)
-* [AWK & Sed](os/awk-sed.md)
-* [Windows](os/win-settings.md)
+* [Linux](os/linux)
+    * [Git CLI](os/git-shell.md)
+    * [AWK & Sed](os/awk-sed.md)
+* [Windows](os/windows)
+    * [安装/配置Windows](os/win-settings.md)
 
 ## Other
 

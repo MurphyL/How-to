@@ -3,3 +3,5 @@ insert ignore 与insert into的区别就是insert ignore 会忽略数据库中�
 replace into 跟 insert 功能类似，不同点在于：replace into 首先尝试插入数据到表中， 1. 如果发现表中已经有此行数据（根据主键或者唯一索引判断）则先删除此行数据，然后插入新的数据。 2. 否则，直接插入新数据。
 
 ON DUPLICATE KEY UPDATE：批量插入数据，自动解决索引冲突。
+
+[MySQL - 大表优化](https://mp.weixin.qq.com/s/BMQC2oJlhLoeBDtveXgHpw)

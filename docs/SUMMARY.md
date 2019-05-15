@@ -4,7 +4,7 @@
 
 ## Core Java
 
-* [Core](core-java/core/README.md)
+* [基础知识](core-java/core/README.md)
     * [集合](core-java/core/collections.md)
     * [枚举](core-java/core/enum.md)
     * [注解](core-java/core/annotation.md)

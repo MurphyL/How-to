@@ -2,5 +2,14 @@
 description: Java集合
 ---
 
-# 集合类
+## List
+
+## Set
+
+## Map
+
+{% hint style="warn" %}
+ 没有继承java.util.Collection接口。
+{% endhint %}
+
 

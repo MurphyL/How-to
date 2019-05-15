@@ -1,3 +1,3 @@
 ---
-description: Core Java
+description: Java核心
 ---

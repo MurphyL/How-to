@@ -4,7 +4,7 @@
 
 ## Core Java
 
-* [核心](core-java/core/README.md)
+* [基础](core-java/core/README.md)
     * [集合](core-java/core/collections.md)
     * [枚举](core-java/core/enum.md)
     * [注解](core-java/core/annotation.md)
@@ -20,7 +20,8 @@
 
 ## Big Data
 
-* [Hadoop CLI](big-data/hadoop-cli.md)
+* [Hadoop](big-data/hadoop-cli.md)
+    * [Hadoop CLI](big-data/hadoop-cli.md)
 * [Hive](big-data/hive/README.md)
     * [Hive QL](big-data/hive/hive-ql.md)
     * [Hive JDBC](big-data/hive/hive-jdbc.md)

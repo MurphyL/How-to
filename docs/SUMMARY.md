@@ -26,7 +26,7 @@
 
 * [Hadoop](big-data/hadoop-cli.md)
     * [Hadoop CLI](big-data/hadoop-cli.md)
-* [Hive](big-data/hive)
+* [Hive](big-data/hive/README.md)
     * [Hive QL](big-data/hive/hive-ql.md)
     * [Hive JDBC](big-data/hive/hive-jdbc.md)
 

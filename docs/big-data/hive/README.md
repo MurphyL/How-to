@@ -1,41 +1,12 @@
 ---
-description: Hive Query Language
+description: Hive
 ---
 
-# Hive
+`Hive`是`Facebook`于2008年开源的一个数据仓库框架。`Hive`定义了一个类似于SQL的查询语言——`HQL`，能够将用户编写的`QL`转化为相应的`MapReduce`程序基于`Hadoop`执行。
 
-## 导入数据到`Hive`
+`Hive`适合用来对一段时间内的数据进行分析查询。Hive 不应该用来进行实时的查询（`Hive`的设计目的，也不是支持实时的查询），因为它需要很长时间才可以返回结果。
 
-```sql
--- 导入本地数据
-LOAD DATA LOCAL INPATH '/home/csv_file.csv' OVERWRITE INTO TABLE csv_test_table;
--- 导入HDFS数据
-LOAD DATA INPATH '/test/dc_web' OVERWRITE INTO TABLE dp_daily;
-```
 
-## 分区操作
+### 参考文档
 
-```sql
--- 列出所有分区
-SHOW PARTITIONS table_name;
--- 删除分区
-ALTER TABLE test_table DROP IF EXISTS PARTITION(dt = 20171225);
-```
-
-## 行转列
-
-```sql
-SELECT explode(split('北京,天津,河北,山西,内蒙古,辽宁,吉林,黑龙江,上海,江苏,浙江,安徽,福建,江西,山东,河南,湖北,湖南,广东,广西,海南,重庆,四川,贵州,云南,西藏,陕西,甘肃,青海,宁夏,新疆,香港,澳门,台湾', ','))
-```
-
-## 分组取`TopN`
-
-```sql
-SELECT *
-  FROM (SELECT label,
-               row_number () OVER (PARTITION BY label ORDER BY num DESC) rn,
-               num
-          FROM test.group_top_n) a
- WHERE a.rn <= 3
-```
-
+1. [technology-talk - Hive](https://github.com/aalansehaiyang/technology-talk/blob/master/middle-software/Hive.md)

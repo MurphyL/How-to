@@ -16,9 +16,9 @@
 ## Big Data
 
 * [Hadoop CLI](big-data/hadoop-cli.md)
-* [Hive](big-data/hive-ql/README.md)
-* [Hive SQL](big-data/hive/hive-ql.md)
-* [Hive JDBC](big-data/hive/hive-jdbc.md)
+* [Hive](big-data/hive/README.md)
+    * [Hive SQL](big-data/hive/hive-ql.md)
+    * [Hive JDBC](big-data/hive/hive-jdbc.md)
 
 ## Operating System
 

@@ -8,7 +8,7 @@
     * [集合](core-java/core/collections.md)
     * [枚举](core-java/core/enum.md)
     * [注解](core-java/core/annotation.md)
-* [JUC](core-java/juc/README.md)
+* [多线程](core-java/juc/README.md)
 
 ## Framework
 

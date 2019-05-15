@@ -4,23 +4,23 @@
 
 ## Core Java
 
-* [基础](core-java/core)
+* [基础](core-java/core/README.md)
     * [集合](core-java/core/collections.md)
     * [枚举](core-java/core/enum.md)
     * [注解](core-java/core/annotation.md)
-* [并发](core-java/juc)
+* [并发](core-java/juc/README.md)
     * [工具](core-java/juc/juc-utils.md)
     * [集合](core-java/juc/juc-collections.md)
 
 ## Framework
 
-* [Spring](framework/spring)
+* [Spring](framework/spring/README.md)
     * [Spring AOP](framework/spring/spring-aop.md)
     * [Spring MVC](framework/spring/spring-mvc.md)
 
 ## Database
 
-* [MySQL](db/mysql)
+* [MySQL](db/mysql/README.md)
 
 ## Big Data
 
@@ -32,7 +32,7 @@
 
 ## Operating System
 
-* [Linux](os/linux)
+* [Linux](os/linux/README.md)
     * [Git CLI](os/git-shell.md)
     * [AWK & Sed](os/awk-sed.md)
 * [Windows](os/windows)

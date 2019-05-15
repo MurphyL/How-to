@@ -28,3 +28,6 @@ description: 命令行中的Git
   git reset
 ```
 
+## 参考文档
+
+1. [JavaGuide - Git](https://github.com/Snailclimb/JavaGuide/blob/master/docs/tools/Git.md)

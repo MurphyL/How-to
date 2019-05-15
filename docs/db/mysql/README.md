@@ -4,4 +4,6 @@ replace into 跟 insert 功能类似，不同点在于：replace into 首先尝�
 
 ON DUPLICATE KEY UPDATE：批量插入数据，自动解决索引冲突。
 
-[MySQL - 大表优化](https://mp.weixin.qq.com/s/BMQC2oJlhLoeBDtveXgHpw)
+## 参考文档
+1. [MySQL - 大表优化](https://mp.weixin.qq.com/s/BMQC2oJlhLoeBDtveXgHpw)
+2. [JavaGuide - MySQL事务隔离](https://github.com/Snailclimb/JavaGuide/blob/master/docs/database/%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB(%E5%9B%BE%E6%96%87%E8%AF%A6%E8%A7%A3).md)

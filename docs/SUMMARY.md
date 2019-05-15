@@ -4,25 +4,29 @@
 
 ## Core Java
 
-* [基础](core-java/core/README.md)
+* [基础](core-java/core)
     * [集合](core-java/core/collections.md)
     * [枚举](core-java/core/enum.md)
     * [注解](core-java/core/annotation.md)
-* [并发](core-java/juc/README.md)
+* [并发](core-java/juc)
     * [工具](core-java/juc/juc-utils.md)
     * [集合](core-java/juc/juc-collections.md)
 
 ## Framework
 
-* [Spring](framework/spring/README.md)
+* [Spring](framework/spring)
     * [Spring AOP](framework/spring/spring-aop.md)
     * [Spring MVC](framework/spring/spring-mvc.md)
+
+## Database
+
+* [MySQL](db/mysql)
 
 ## Big Data
 
 * [Hadoop](big-data/hadoop-cli.md)
     * [Hadoop CLI](big-data/hadoop-cli.md)
-* [Hive](big-data/hive/README.md)
+* [Hive](big-data/hive)
     * [Hive QL](big-data/hive/hive-ql.md)
     * [Hive JDBC](big-data/hive/hive-jdbc.md)
 

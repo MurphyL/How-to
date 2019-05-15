@@ -10,4 +10,5 @@ description: Java核心
 
 ## 参考文档
 
-1. [参考文档](https://github.com/aalansehaiyang/technology-talk/blob/master/basic-knowledge/java.md)
+1. [basic-knowledge - Java基础](https://github.com/aalansehaiyang/technology-talk/blob/master/basic-knowledge/java.md)
+2. [JavaGuide - Java基础](https://github.com/Snailclimb/JavaGuide#%E5%9F%BA%E7%A1%80)

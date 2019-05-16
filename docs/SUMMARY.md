@@ -20,7 +20,7 @@
 
 ## Database
 
-* [MySQL](db/mysql/README.md)
+* [MySQL](database/mysql/README.md)
 
 ## Big Data
 

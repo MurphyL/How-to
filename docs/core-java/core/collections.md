@@ -2,7 +2,7 @@
 description: Java容器
 ---
 
-![Java容器](http://www.plantuml.com/plantuml/proxy?src=https://github.com/MurphyL/How-to/blob/master/docs/core-java/core/collections.puml)
+![Java容器](./java-collections.svg)
 
 ## List
 

@@ -38,7 +38,7 @@ description: Java多线程工具
 5. 用户自定义拒绝策略：实现`RejectedExecutionHandler`，并自己定义策略模式；
 
 ```java
-    // TODO
+// TODO
 ```
 
 ## CountDownLatch - 闭锁

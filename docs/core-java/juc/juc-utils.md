@@ -1,5 +1,5 @@
 ---
-description: Java多线程工具
+description: Java并发工具类
 ---
 
 ## ExecutorService - 线程池

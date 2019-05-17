@@ -1,5 +1,5 @@
 ---
-description: Java多线程集合
+description: Java并发集合
 ---
 
 ## List

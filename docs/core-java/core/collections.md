@@ -4,17 +4,108 @@ description: Java容器
 
 ![Java容器](./puml/java-collections.svg)
 
-## List
+## 接口定义
 
-## Set
+```java
+interface Iterable<T> {
 
-## Map
+    Iterator<T> iterator()
+
+}
+
+interface Collection<E> extends Iterable<E> {
+
+    int size()
+
+    Object[] toArray()
+    <T> T[] toArray(T[] a)
+
+    boolean add(E e)
+    boolean addAll(Collection<? extends E> c)
+    boolean remove(Object o)
+    void clear()
+
+    boolean retainAll(Collection<?> c)
+
+    boolean isEmpty()
+    
+    boolean contains(Object o)
+    boolean containsAll(Collection<?> c)
+
+}
+
+interface Queue<E> extends Collection {
+
+    boolean offer(E e)
+    E poll()
+    E element()
+    E peek()
+
+}
+
+interface Deque<E> extends Queue {
+
+    void addFirst(E e)
+    void addLast(E e)
+
+    boolean offerFirst(E e)
+    boolean offerLast(E e)
+
+    E removeFirst()
+    E removeLast()
+
+    E pollFirst()
+    E pollLast()
+
+    E getFirst()
+    E getLast()
+
+    E peekFirst()
+    E peekLast()
+
+}
+
+interface Map<K,V> {
+
+    int size()
+    boolean isEmpty()
+
+    boolean containsKey(Object key)
+    boolean containsValue(Object value)
+    
+    V get(Object key)
+    V put(K key, V value)
+    V remove(Object key)
+    
+    void putAll(Map<? extends K, ? extends V> m)
+    
+    void clear()
+    
+    Set<K> keySet()
+    Collection<V> values()
+    Set<Map.Entry<K, V>> entrySet()
+
+}
+
+```
+
+## 主要容器
+
+### Queue（`PriorityQueue`）
+
+### List（`ArrayList`、`LinkedList`）
+
+### Set（`TreeSet`、`HashSet`、`LinkedHashSet`）
+
+### Map（`HashMap`、`TreeMap`、`Hashtable`）
 
 {% hint style="warn" %}
  没有继承java.util.Collection接口。
 {% endhint %}
 
-## Collections
+## 工具类
+
+### Collections
 
 Collections 工具类常用方法:
 

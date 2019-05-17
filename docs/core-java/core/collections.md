@@ -104,9 +104,7 @@ interface Deque<E> extends Queue {
 
 
 {% hint style="warn" %}
-** 和数组的区别 **
-1、数组的长度难以扩充
-2、数组中数据的类型必须相同
+** 和数组的主要区别 **：数组的长度难以扩充，数组中数据的类型必须相同。
 {% endhint %}
 
 #### ArrayList

@@ -2,7 +2,7 @@
 description: Java容器
 ---
 
-![Java容器](./java-collections.svg)
+![Java容器](./puml/java-collections.svg)
 
 ## List
 

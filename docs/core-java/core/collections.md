@@ -44,9 +44,10 @@ interface Map<K,V> {
 interface Collection<E> extends Iterable<E> {
 
     int size()
+    boolean isEmpty()
 
-    Object[] toArray()
-    <T> T[] toArray(T[] a)
+    boolean contains(Object o)
+    boolean containsAll(Collection<?> c)
 
     boolean add(E e)
     boolean addAll(Collection<? extends E> c)
@@ -55,10 +56,8 @@ interface Collection<E> extends Iterable<E> {
 
     boolean retainAll(Collection<?> c)
 
-    boolean isEmpty()
-
-    boolean contains(Object o)
-    boolean containsAll(Collection<?> c)
+    Object[] toArray()
+    <T> T[] toArray(T[] a)
 
 }
 
@@ -98,15 +97,50 @@ interface Deque<E> extends Queue {
 
 ### Queue（`PriorityQueue`）
 
+#### PriorityQueue
+
+
 ### List（`ArrayList`、`LinkedList`）
+
+
+{% hint style="warn" %}
+** 和数组的区别 **
+1、数组的长度难以扩充
+2、数组中数据的类型必须相同
+{% endhint %}
+
+#### ArrayList
+
+#### LinkedList
 
 ### Set（`TreeSet`、`HashSet`、`LinkedHashSet`）
 
+Set集合中不区分元素的顺序，不允许出现重复的元素（用户自定义的类有的时候需要实现相应方法），相同的元素不会被加入。
+
+
+#### TreeSet
+
+{% hint style="info" %}
+TreeSet容器特殊，元素放进去的时候自然而然就有顺序。
+{% endhint %}
+
+#### HashSet
+
+#### LinkedHashSet
+
 ### Map（`HashMap`、`TreeMap`、`Hashtable`）
 
-{% hint style="warn" %}
+{% hint style="info" %}
  没有继承java.util.Collection接口。
 {% endhint %}
+
+#### HashMap
+
+#### TreeMap
+
+#### Hashtable
+
+
 
 ## 工具类
 

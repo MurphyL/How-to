@@ -17,3 +17,7 @@ description: Java注解，通常配合反射来使用。
 `@Native`指定字段是一个常量，其值引用`native code`；
 
 `@Repeatable`注解上可以使用重复注解，即可以在一个地方可以重复使用同一个注解，像`Spring`中的包扫描注解就使用了这个。
+
+## 参考资料
+
+- [Java进阶（一）Annotation（注解）](http://www.jasongj.com/2016/01/17/Java1_%E6%B3%A8%E8%A7%A3Annotation/)

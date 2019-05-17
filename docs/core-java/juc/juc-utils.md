@@ -15,7 +15,7 @@ description: Java多线程工具
 
 ### ThreadPoolExecutor
 
-#### 构造方法参数说明：
+#### 构造方法参数说明
 
 `corePoolSize`：核心线程数，默认情况下核心线程会一直存活，即使处于闲置状态也不会受存`keepAliveTime`限制。除非将`allowCoreThreadTimeOut`设置为`true`。
  

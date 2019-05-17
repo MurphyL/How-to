@@ -9,8 +9,8 @@
     * [枚举](core-java/core/enum.md)
     * [注解](core-java/core/annotation.md)
 * [并发](core-java/juc/README.md)
-    * [工具](core-java/juc/juc-utils.md)
-    * [容器](core-java/juc/juc-collections.md)
+    * [并发工具](core-java/juc/juc-utils.md)
+    * [并发容器](core-java/juc/juc-collections.md)
 
 ## Framework
 

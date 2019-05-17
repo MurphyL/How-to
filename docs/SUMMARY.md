@@ -5,12 +5,12 @@
 ## Core Java
 
 * [基础](core-java/core/README.md)
-    * [集合](core-java/core/collections.md)
+    * [容器](core-java/core/collections.md)
     * [枚举](core-java/core/enum.md)
     * [注解](core-java/core/annotation.md)
 * [并发](core-java/juc/README.md)
     * [工具](core-java/juc/juc-utils.md)
-    * [集合](core-java/juc/juc-collections.md)
+    * [容器](core-java/juc/juc-collections.md)
 
 ## Framework
 

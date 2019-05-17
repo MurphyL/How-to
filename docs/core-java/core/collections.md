@@ -1,6 +1,8 @@
 ---
-description: Java集合
+description: Java容器
 ---
+
+![Java容器](http://www.plantuml.com/plantuml/proxy?src=https://github.com/MurphyL/How-to/blob/master/docs/core-java/core/collections.puml)
 
 ## List
 

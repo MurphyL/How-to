@@ -17,6 +17,7 @@
 * [Spring](framework/spring/README.md)
     * [Spring AOP](framework/spring/spring-aop.md)
     * [Spring MVC](framework/spring/spring-mvc.md)
+* [Vert.x](framework/vert.x/README.md)
 
 ## Database
 

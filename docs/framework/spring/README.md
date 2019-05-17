@@ -1,5 +1,5 @@
 ---
-description: Spring MVC
+description: Spring
 ---
 
 # Spring

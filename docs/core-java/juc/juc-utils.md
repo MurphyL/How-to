@@ -2,25 +2,25 @@
 description: Java多线程工具
 ---
 
-## CountDownLatch
+## CountDownLatch - 闭锁
 
 ```java
 // TODO
 ```
 
-## CyclicBarrier
+## CyclicBarrier - 栅栏
 
 ```java
 // TODO
 ```
 
-## Semaphore
+## Semaphore - 信号量
 
 ```java
 // TODO
 ```
 
-## Exchanger
+## Exchanger - 交换机
 
 ```java
 // TODO

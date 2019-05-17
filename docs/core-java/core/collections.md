@@ -4,7 +4,9 @@ description: Java容器
 
 ![Java容器](./puml/java-collections.svg)
 
-## 接口定义
+## 门面接口
+
+### 基础接口
 
 ```java
 interface Iterable<T> {
@@ -13,6 +15,32 @@ interface Iterable<T> {
 
 }
 
+interface Map<K,V> {
+
+    int size()
+    boolean isEmpty()
+
+    boolean containsKey(Object key)
+    boolean containsValue(Object value)
+    
+    V get(Object key)
+    V put(K key, V value)
+    V remove(Object key)
+    
+    void putAll(Map<? extends K, ? extends V> m)
+    
+    void clear()
+    
+    Set<K> keySet()
+    Collection<V> values()
+    Set<Map.Entry<K, V>> entrySet()
+
+}
+```
+
+### 主要容器接口
+
+```java
 interface Collection<E> extends Iterable<E> {
 
     int size()
@@ -28,7 +56,7 @@ interface Collection<E> extends Iterable<E> {
     boolean retainAll(Collection<?> c)
 
     boolean isEmpty()
-    
+
     boolean contains(Object o)
     boolean containsAll(Collection<?> c)
 
@@ -64,29 +92,6 @@ interface Deque<E> extends Queue {
     E peekLast()
 
 }
-
-interface Map<K,V> {
-
-    int size()
-    boolean isEmpty()
-
-    boolean containsKey(Object key)
-    boolean containsValue(Object value)
-    
-    V get(Object key)
-    V put(K key, V value)
-    V remove(Object key)
-    
-    void putAll(Map<? extends K, ? extends V> m)
-    
-    void clear()
-    
-    Set<K> keySet()
-    Collection<V> values()
-    Set<Map.Entry<K, V>> entrySet()
-
-}
-
 ```
 
 ## 主要容器

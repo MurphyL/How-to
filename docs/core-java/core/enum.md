@@ -6,6 +6,37 @@ description: Java枚举
 枚举是类的语法糖；
 {% endhint %}
 
+```java
+package com.murphyl.demo.core.javap;
+public enum SeasonEnum {
+
+    SPRING, SUMMER, AUTUMN, WINTER
+
+}
+```
+
+```java
+// javap -c SeasonEnum.class
+public final class com.murphyl.demo.core.javap.SeasonEnum extends java.lang.Enum<com.murphyl.demo.core.javap.SeasonEnum> {
+
+    public static final com.murphyl.demo.core.javap.SeasonEnum SPRING;
+
+    public static final com.murphyl.demo.core.javap.SeasonEnum SUMMER;
+
+    public static final com.murphyl.demo.core.javap.SeasonEnum AUTUMN;
+
+    public static final com.murphyl.demo.core.javap.SeasonEnum WINTER;
+
+    public static com.murphyl.demo.core.javap.SeasonEnum[] values();
+
+    public static com.murphyl.demo.core.javap.SeasonEnum valueOf(java.lang.String);
+
+    // 初始化
+    static {};
+
+}
+```
+
 ## 剖析枚举
 
 1. Enum类有两个成员变量：name（名字）和ordinal（顺序，从0开始）；

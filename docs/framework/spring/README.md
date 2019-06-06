@@ -12,23 +12,21 @@ IOC 容器具有依赖注入功能的容器，它可以创建对象，IOC 容器
 
 ### InitializingBean
 
-初始化回调
+InitializingBean 为bean提供了定义初始化方法的方式。InitializingBean是一个接口，它仅仅包含一个方法`afterPropertiesSet()`。
+
+通常情况下不建议bean直接实现InitializingBean，因为没有必要把代码通Spring耦合起来。可以使用Spring提供的init-method的功能来执行一个bean 子定义的初始化方法。
 
 ### DisposableBean
 
-销毁回调
+DisposableBean接口的bean允许在容器销毁该bean的时候获得一次回调。DisposableBean接口也只规定了一个方法`destroy()`。要避免使用DisposableBean标志接口，因为这样会将代码与Spring耦合在一起，有一个可选的方案是，在bean定义中指定一个普通的析构方法，然后Bean声明时通过指定destroy-method属性来完成。
 
-### BeanFactoryAware
 
-用于获取 BeanFactory
+### BeanFactoryAware、BeanNameAware、BeanClassLoaderAware
 
-### BeanNameAware
+实现BeanFactoryAware接口，其中只有一个方法即setFactory(BeanFactory factory)。使用上与BeanNameAware接口无异，只不过BeanFactoryAware注入的是个工厂，
 
-用于获取 Bean Name
-
-### BeanClassLoaderAware
-
-用于获取 Bean ClassLoader
+> - `BeanNameAware`注入的是Bean的名字;
+> - `BeanClassLoaderAware`注入的是Bean的ClassLoader。
 
 ###  BeanPostProcessor
 
@@ -37,11 +35,11 @@ IOC 容器具有依赖注入功能的容器，它可以创建对象，IOC 容器
 
 ## 基于 Java 的配置
 
-### `@Configuration` 注解
+### @Configuration 注解
 
 带有 @Configuration 的注解类表示这个类可以使用 Spring IoC 容器作为 bean 定义的来源。
 
-### `@Bean` 注解
+### @Bean 注解
 
 @Bean 注解告诉 Spring，一个带有 @Bean 的注解方法将返回一个对象，该对象应该被注册为在 Spring 应用程序上下文中的 bean。
 
@@ -49,7 +47,7 @@ IOC 容器具有依赖注入功能的容器，它可以创建对象，IOC 容器
 
 @Bean 注解支持指定任意的初始化和销毁的回调方法。
 
-### `@Import`、`@Import` 注解
+### @Import、@ImportResource 注解
 
 `@import` 注解允许从另一个配置类中加载 @Bean 定义。
 

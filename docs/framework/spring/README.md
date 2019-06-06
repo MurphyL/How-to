@@ -20,7 +20,6 @@ Spring MVC 框架是以请求为驱动，围绕 Servlet 设计的基于 MVC 的W
 
 Spring Boot 提供了一组工具，以便快速构建容易配置的 Spring 应用程序。大多数情况下，只需极少的配置，就可以快速获得一个正常运行的 Spring 应用程序。
 
-## 其他部分
+## [基于 Java 的配置](spring-java-config.md)
 
-### [基于 Java 的配置](spring-java-config.md)
-### [Spring Boot 针对 Web 的扩充](spring-java-config.md)
+## [Spring Boot 针对 Web 的扩充](spring-java-config.md)

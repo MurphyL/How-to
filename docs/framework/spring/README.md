@@ -22,4 +22,4 @@ Spring Boot 提供了一组工具，以便快速构建容易配置的 Spring 应
 
 ## [基于 Java 的配置](spring-java-config.md)
 
-## [Spring Boot 针对 Web 的扩充](spring-java-config.md)
+## [Spring Boot Web](spring-java-config.md)

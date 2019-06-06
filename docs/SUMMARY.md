@@ -19,7 +19,8 @@
     * [Spring IoC](framework/spring/spring-ioc.md)
     * [Spring MVC](framework/spring/spring-mvc.md)
     * [Spring Boot](framework/spring/spring-boot.md)
-        * [Spring Boot Web](framework/spring/spring-boot-web.md)
+    * [Java Config](framework/spring/spring-java-config.md)
+    * [Spring Boot Web](framework/spring/spring-boot-web.md)
 * [Vert.x](framework/vertx/README.md)
 
 ## Database

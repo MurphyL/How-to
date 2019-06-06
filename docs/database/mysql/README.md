@@ -4,6 +4,16 @@ descrption: MySQL
 
 ## 事务隔离机制
 
+
+### Java 代码设置
+
+```java
+con.setAutoCommit(false);
+conn.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
+```
+
+### SQL 设置
+
 ```sql
 SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED
 ```

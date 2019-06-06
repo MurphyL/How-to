@@ -18,9 +18,19 @@ IOC 容器具有依赖注入功能的容器，它可以创建对象，IOC 容器
 
 销毁回调
 
-###  Spring Bean 后置处理器
+### BeanFactoryAware
 
-#### BeanPostProcessor 
+用于获取 BeanFactory
+
+### BeanNameAware
+
+用于获取 Bean Name
+
+### BeanClassLoaderAware
+
+用于获取 Bean ClassLoader
+
+###  BeanPostProcessor
 
 接口定义回调方法，你可以实现该方法来提供自己的实例化逻辑，依赖解析逻辑等。
 

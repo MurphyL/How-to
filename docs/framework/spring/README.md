@@ -1,81 +1,24 @@
 ---
-description: Spring 有可能成为所有企业应用程序的一站式服务端点。然而，Spring 是模块化的，允许你挑选和选择适用于你的模块，不必要把剩余部分也引入。
+description: Spring 框架
 ---
 
-## Spring IoC 容器
+## [Spring IoC](spring-ioc.md)
 
-`Spring IoC` 容器是 Spring 框架的核心。它包揽了受管理的应用程序的组件（Spring Bean）的创建，装配，销毁等一些列动作。
+控制反转（Inversion of Control）是面向对象编程中的一种设计原则，可以用来减低计算机代码之间的耦合度。其中最常见的方式叫做依赖注入（Dependency Injection，简称DI），还有一种方式叫“依赖查找”（Dependency Lookup）。通过控制反转，对象在被创建的时候，由一个调控系统内所有对象的外界实体，将其所依赖的对象的引用传递给它。也可以说，依赖被注入到对象中。
 
+## [Spring AOP](spring-aop.md)
 
+面向切面的程序设计（Aspect-orientedPprogramming）是计算机科学中的一种程序设计范型，旨在将横切关注点与业务主体进行进一步分离，以提高程序代码的模块化程度。
 
-## 基于 Java 的配置
+## [Spring MVC](spring-mvc.md)
 
-### @Configuration 注解
+Spring MVC 是一个基于 MVC 的Web框架。它负责发送每个请求到合适的处理程序，使用视图来最终返回响应结果。
 
-带有 @Configuration 的注解类表示这个类可以使用 Spring IoC 容器作为 bean 定义的来源。
+## [Spring Boot](spring-boot.md)
 
-### @Bean 注解
+Spring Boot 提供了一组工具，以便快速构建容易配置的 Spring 应用程序。大多数情况下，只需极少的配置，就可以快速获得一个正常运行的 Spring 应用程序。
 
-@Bean 注解告诉 Spring，一个带有 @Bean 的注解方法将返回一个对象，该对象应该被注册为在 Spring 应用程序上下文中的 bean。
+## 其他部分
 
-带有 @Bean 注解的方法名称作为 bean 的 ID，它创建并返回实际的 bean。你的配置类可以声明多个 @Bean。
-
-@Bean 注解支持指定任意的初始化和销毁的回调方法。
-
-### @Import、@ImportResource 注解
-
-`@import` 注解允许从另一个配置类中加载 @Bean 定义。
-
-最简单可行的 @Configuration 类如下所示：
-
-```java
-package com.murphyl;
-
-import org.springframework.context.annotation.*;
-
-@Configuration
-public class HelloWorldConfig {
-
-   @Bean
-   public HelloWorld helloWorld(){
-      return new HelloWorld();
-   }
-
-}
-```
-
-上面的代码将等同于下面的 XML 配置：
-
-```xml
-<beans>
-   <bean id="helloWorld" class="com.murphyl.HelloWorld" />
-</beans>
-```
-
-引入其他配置：
-
-```java
-package com.murphyl;
-
-import org.springframework.context.annotation.*;
-
-@Import(ConfigTestImport.class)
-@Configuration
-public class HelloWorldConfig {
-
-   @Bean(initMethod = "init", destroyMethod = "cleanup")
-   public HelloWorld helloWorld(){
-      return new HelloWorld();
-   }
-
-}
-
-public class HelloWorld {
-   public void init() {
-      // initialization logic
-   }
-   public void cleanup() {
-      // destruction logic
-   }
-}
-```
+[基于 Java 的配置](spring-java-config.md)
+[Spring Boot 针对 Web 的扩充](spring-java-config.md)

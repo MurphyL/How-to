@@ -1,4 +1,12 @@
+```
+descrption: MySQL
+```
 
+## 事务隔离机制
+
+```sql
+SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED
+```
 
 ## `SQL`语句
 

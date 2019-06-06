@@ -10,9 +10,11 @@ description: Spring 框架
 
 面向切面的程序设计（Aspect-orientedPprogramming）是计算机科学中的一种程序设计范型，旨在将横切关注点与业务主体进行进一步分离，以提高程序代码的模块化程度。
 
+AOP思想的实现一般都是基于`代理模式` 。`Spring AOP` 同时支持 `CGLIB`、`ASPECTJ`、JDK动态代理。
+
 ## [Spring MVC](spring-mvc.md)
 
-Spring MVC 是一个基于 MVC 的Web框架。它负责发送每个请求到合适的处理程序，使用视图来最终返回响应结果。
+Spring MVC 框架是以请求为驱动，围绕 Servlet 设计的基于 MVC 的Web框架。将请求发给控制器，然后通过模型对象，分派器来展示请求结果视图。
 
 ## [Spring Boot](spring-boot.md)
 

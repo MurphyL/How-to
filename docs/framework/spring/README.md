@@ -4,22 +4,17 @@ description: Spring 有可能成为所有企业应用程序的一站式服务端
 
 ## Spring IoC 容器
 
-Spring 容器是 Spring 框架的核心。容器将创建对象，把它们连接在一起，配置它们，并管理他们的整个生命周期从创建到销毁。Spring 容器使用依赖注入（DI）来管理组成一个应用程序的组件（Spring Beans）。
-
-IOC 容器具有依赖注入功能的容器，它可以创建对象，IOC 容器负责实例化、定位、配置应用程序中的对象及建立这些对象间的依赖。通常new一个实例，控制权由程序员控制，而"控制反转"是指new实例工作不由程序员来做而是交给Spring容器来做。
+`Spring IoC` 容器是 Spring 框架的核心。它包揽了受管理的应用程序的组件（Spring Bean）的创建，装配，销毁等一些列动作。
 
 ### Spring Bean 生命周期
 
-### InitializingBean
+### InitializingBean、DisposableBean
 
-InitializingBean 为bean提供了定义初始化方法的方式。InitializingBean是一个接口，它仅仅包含一个方法`afterPropertiesSet()`。
+`InitializingBean` 接口为 bean 提供了定义初始化方法的方式。`InitializingBean` 仅仅包含一个方法`afterPropertiesSet()`。
 
-通常情况下不建议bean直接实现InitializingBean，因为没有必要把代码通Spring耦合起来。可以使用Spring提供的init-method的功能来执行一个bean 子定义的初始化方法。
+`DisposableBean` 接口允许在容器销毁 bean 的时候获得一次回调。`DisposableBean` 接口也只规定了一个方法`destroy()`。
 
-### DisposableBean
-
-DisposableBean接口的bean允许在容器销毁该bean的时候获得一次回调。DisposableBean接口也只规定了一个方法`destroy()`。要避免使用DisposableBean标志接口，因为这样会将代码与Spring耦合在一起，有一个可选的方案是，在bean定义中指定一个普通的析构方法，然后Bean声明时通过指定destroy-method属性来完成。
-
+要避免使用 `InitializingBean`和 `DisposableBean` 标志接口，因为这样会将代码与Spring耦合在一起。可以分别使用 `Spring` 提供的 `init-method` 和 `destroy-method` 的功能来执行一个bean 定义的初始化和销毁方法。
 
 ### BeanFactoryAware、BeanNameAware、BeanClassLoaderAware
 
@@ -31,7 +26,6 @@ DisposableBean接口的bean允许在容器销毁该bean的时候获得一次回�
 ###  BeanPostProcessor
 
 接口定义回调方法，你可以实现该方法来提供自己的实例化逻辑，依赖解析逻辑等。
-
 
 ## 基于 Java 的配置
 

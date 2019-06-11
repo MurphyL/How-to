@@ -1,5 +1,5 @@
 ---
-description: Spring 框架
+description: Spring 大家族
 ---
 
 ## [Spring IoC](spring-ioc.md)
@@ -14,7 +14,7 @@ AOP思想的实现一般都是基于`代理模式` 。`Spring AOP` 同时支持 
 
 ## [Spring MVC](spring-mvc.md)
 
-Spring MVC 框架是以请求为驱动，围绕 Servlet 设计的基于 MVC 的Web框架。将请求发给控制器，然后通过模型对象，分派器来展示请求结果视图。
+以请求为驱动，基于 `Servlet` 设计的 Web MVC 框架。控制器接收、处理请求，然后通过模型对象、分派器展示请求结果视图。
 
 ## [Spring Boot](spring-boot.md)
 

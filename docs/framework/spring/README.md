@@ -29,7 +29,3 @@ Spring Boot 提供了一组工具，以便快速构建容易配置的 Spring 应
 Spring 4 以后，官方推荐我们使用 `Java Config` 来代替 `applicationContext.xml`，声明将Bean交给容器管理。
 
 > Spring Boot 已不再推荐使用 `XML` 配置。
-
-## [Spring Boot Web](spring-java-web.md)
-
-Spring Boot 再 `Web` 开发中针对 `Spring MVC` 的增强和扩充。

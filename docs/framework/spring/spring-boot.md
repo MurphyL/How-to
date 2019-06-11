@@ -60,3 +60,7 @@ Spring Boot 解决这些问题的方法是定义一种特殊的 JAR 文件布局
 		</plugins>
 	</build>
 ```
+
+## 其他&扩充
+
+- [Spring Boot Web](spring-boot-web)：Spring Boot 再 `Web` 开发中针对 `Spring MVC` 的增强和扩充。

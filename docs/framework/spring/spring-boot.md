@@ -16,7 +16,7 @@ Spring Boot 会使用其 `@EnableAutoConfiguration` 注释自动配置您的应�
 
 > 查看配置：使用 `--debug` 选项启动您的 Spring Boot 应用程序，然后将向控制台生成一个自动配置报告。
 
-## über jar
+## Spring Boot über JAR
 
 Spring Boot 旨在帮助开发人员创建能直接运行的应用程序。为实现该目的，它将应用程序及其依赖项包装在一个可执行 JAR 中。
 

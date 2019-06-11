@@ -1,6 +1,8 @@
 ---
-description: 基于 Java 的配置
+description: Spring 4 以后，官方推荐我们使用 Java Config 来代替 `applicationContext.xml`，声明将Bean交给容器管理。
 ---
+
+Java Config：`AnnotationConfigApplicationContext`
 
 ## 基于 Java 的配置
 

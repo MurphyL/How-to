@@ -47,4 +47,3 @@
 
 * [GitBook](other/gitbook.md)
 * [PUML](other/puml.md)
-

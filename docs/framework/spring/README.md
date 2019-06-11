@@ -14,13 +14,11 @@ AOP思想的实现一般都是基于`代理模式` 。`Spring AOP` 同时支持 
 
 ## [Spring MVC](spring-mvc.md)
 
-以请求为驱动，基于 `Servlet` 设计的 Web MVC 框架。控制器接收、处理请求，然后通过模型对象、分派器展示请求结果视图。
+以请求为驱动，基于 `Servlet` 设计的 Web MVC 框架。控制器接收、处理请求，然后通过模型对象、分派器展示请求结果。
 
-模型（Model） 用于封装与应用程序的业务逻辑相关的数据以及对数据的处理方法。
-
-视图（View）能够实现数据有目的的显示（理论上，这不是必需的）。在 View 中一般没有程序上的逻辑。
-
-控制器（Controller）起到不同层面间的组织作用，用于控制应用程序的流程。它处理事件并作出响应。
+- 模型（Model） 用于封装与应用程序的业务逻辑相关的数据以及对数据的处理方法。
+- 视图（View）能够实现数据有目的的显示（理论上，这不是必需的）。在 View 中一般没有程序上的逻辑。
+- 控制器（Controller）起到不同层面间的组织作用，用于控制应用程序的流程。它处理事件并作出响应。
 
 ## [Spring Boot](spring-boot.md)
 
@@ -28,4 +26,10 @@ Spring Boot 提供了一组工具，以便快速构建容易配置的 Spring 应
 
 ## [基于 Java 的配置](spring-java-config.md)
 
-## [Spring Boot Web](spring-java-config.md)
+Spring 4 以后，官方推荐我们使用 `Java Config` 来代替 `applicationContext.xml`，声明将Bean交给容器管理。
+
+> Spring Boot 已不再推荐使用 `XML` 配置。
+
+## [Spring Boot Web](spring-java-web.md)
+
+Spring Boot 再 `Web` 开发中针对 `Spring MVC` 的增强和扩充。

@@ -18,11 +18,11 @@ description: 线程池
 
 `corePoolSize`：核心线程数，默认情况下核心线程会一直存活，即使处于闲置状态也不会受存`keepAliveTime`限制。除非将`allowCoreThreadTimeOut`设置为`true`。
 
-`maximumPoolSize`：线程池所能容纳的最大线程数。超过这个数的线程将被阻塞。当任务队列为没有设置大小的`LinkedBlockingDeque`时，这个值无效。 
+`maximumPoolSize`：线程池所能容纳的最大线程数。超过这个数的线程将被阻塞。当任务队列为没有设置大小的`LinkedBlockingDeque`时，这个值无效。
 
 `keepAliveTime`：非核心线程的闲置超时时间，超过这个时间就会被回收。 
 
-`unit`：指定`keepAliveTime`的单位，如`TimeUnit.SECONDS`。当将`allowCoreThreadTimeOut`设置为`true`时对`corePoolSize`生效。 
+`unit`：指定`keepAliveTime`的单位，如`TimeUnit.SECONDS`。当将`allowCoreThreadTimeOut`设置为`true`时对`corePoolSize`生效。
 
 `workQueue`：线程池中的任务队列（`SynchronousQueue`、`LinkedBlockingDeque`、`ArrayBlockingQueue`）。
 

@@ -5,6 +5,7 @@ description: Excel工具类
 ```java
 package com.murphyl.utils.excel;
 
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
@@ -25,7 +26,7 @@ import java.util.TreeMap;
 /**
  * Excel - 渲染工具类
  *
- * @author MurphyL
+ * @author luohao
  * @date 2019/6/20 12:25
  */
 @Accessors(chain = true)
@@ -58,6 +59,10 @@ public abstract class ExcelRender<A> {
     @Setter
     private boolean showTitleRow = true;
     /**
+     * 当前相对列游标
+     */
+    private int currentCellIndex = 0;
+    /**
      * 表头索引关系
      */
     private Map<Integer, Field> cellMapping;
@@ -70,10 +75,12 @@ public abstract class ExcelRender<A> {
      * @param items           - 数据集
      * @return
      */
-    protected final <T> XSSFWorkbook render(Class annotationClass, Class<T> tClass, String sheetName, Collection<T> items) {
+    protected synchronized final <T> XSSFWorkbook render(Class annotationClass, Class<T> tClass, String sheetName, Collection<T> items) {
         Assert.notNull(annotationClass, "Excel - 渲染工具类 - 描述注解类型（annotationClass）不能为空！");
         Assert.notNull(tClass, "Excel - 渲染工具类 - 目标对象类型（tClass）不能为空！");
         Assert.isTrue(CollectionUtils.isNotEmpty(items), "Excel - 渲染工具类 - 数据集（items）不能为空！");
+        // 重置，预防多次调用实例方法的情况
+        this.currentCellIndex = 0;
         // 工作簿
         XSSFWorkbook workbook = getWorkbook();
         // 工作表
@@ -95,10 +102,13 @@ public abstract class ExcelRender<A> {
                 if (!field.isAnnotationPresent(annotationClass)) {
                     continue;
                 }
-                // 设置字段访问权限
-                field.setAccessible(true);
                 // 元数据
                 annotation = (A) field.getAnnotation(annotationClass);
+                if (!isEffectiveField(annotation)) {
+                    continue;
+                }
+                // 设置字段访问权限
+                field.setAccessible(true);
                 cellIndex = fixCellOffset(getCellIndex(annotation));
                 // 映射关系
                 cellMapping.put(cellIndex, field);
@@ -113,7 +123,22 @@ public abstract class ExcelRender<A> {
             return workbook;
         }
         fillSheet(items, sheet);
-        return adaptCellWidth(workbook);
+        try {
+            return adaptCellWidth(workbook);
+        } finally {
+            this.reset();
+        }
+    }
+
+    /**
+     * 清理变量，便于二次利用
+     */
+    protected void reset() {
+        this.setTemplate(null)
+                .setFirstRowIndex(0)
+                .setFirstCellIndex(0)
+                .setShowTitleRow(true)
+                .setSheetIndex(null);
     }
 
     /**
@@ -122,21 +147,20 @@ public abstract class ExcelRender<A> {
      * @param cellIndex - 列索引
      * @return
      */
-    public int fixCellOffset(int cellIndex) {
+    private int fixCellOffset(int cellIndex) {
         return firstCellIndex + cellIndex;
     }
 
-
     /**
-     * 渲染 Excel
+     * 可以通过覆盖该方法跳过指定字段
      *
-     * @param tClass
-     * @param sheetName
-     * @param items
-     * @param <T>
+     * @param annotation
      * @return
      */
-    public abstract <T> XSSFWorkbook render(Class<T> tClass, String sheetName, Collection<T> items);
+    protected boolean isEffectiveField(A annotation) {
+        return true;
+    }
+
 
     /**
      * 根据注解获取列明
@@ -144,7 +168,7 @@ public abstract class ExcelRender<A> {
      * @param annotation
      * @return
      */
-    public abstract String getCellName(A annotation);
+    protected abstract String getCellName(A annotation);
 
     /**
      * 根据注解获取相对列索引
@@ -152,7 +176,9 @@ public abstract class ExcelRender<A> {
      * @param annotation
      * @return
      */
-    public abstract int getCellIndex(A annotation);
+    protected int getCellIndex(A annotation) {
+        return currentCellIndex++;
+    }
 
     /**
      * 列宽自适应
@@ -162,10 +188,11 @@ public abstract class ExcelRender<A> {
      */
     private XSSFWorkbook adaptCellWidth(XSSFWorkbook workbook) {
         workbook.forEach(sheet -> {
-            sheet.getRow(sheet.getLastRowNum()).forEach((cell) -> {
+            sheet.getRow(firstRowIndex).forEach((cell) -> {
                 cell.getSheet().autoSizeColumn(cell.getColumnIndex());
             });
         });
+        this.reset();
         return workbook;
     }
 
@@ -215,10 +242,13 @@ public abstract class ExcelRender<A> {
                 }
                 if (null != cellVal) {
                     cell.setCellValue(cellVal.toString());
+                } else {
+                    cell.setCellValue("");
                 }
             }
         }
     }
 
 }
+
 ```

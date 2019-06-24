@@ -60,3 +60,21 @@ Spring Boot 解决这些问题的方法是定义一种特殊的 JAR 文件布局
 		</plugins>
 	</build>
 ```
+
+## Junit Test
+
+```Java
+package com.murphyl.web;
+
+import com.murphyl.web.WebApplication;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = WebApplication.class)
+@WebAppConfiguration
+public class BaseSpringTest {
+}
+```

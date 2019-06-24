@@ -1,6 +1,8 @@
 ---
-description: Excel工具类
+description: POI处理Excel
 ---
+
+## Excel视图渲染器
 
 ```java
 package com.murphyl.utils.excel;
@@ -62,6 +64,8 @@ public abstract class ExcelRender<A> {
      * 当前相对列游标
      */
     private int currentCellIndex = 0;
+    @Setter
+    private boolean throwOnNoItems = false;
     /**
      * 表头索引关系
      */
@@ -78,7 +82,9 @@ public abstract class ExcelRender<A> {
     protected synchronized final <T> XSSFWorkbook render(Class annotationClass, Class<T> tClass, String sheetName, Collection<T> items) {
         Assert.notNull(annotationClass, "Excel - 渲染工具类 - 描述注解类型（annotationClass）不能为空！");
         Assert.notNull(tClass, "Excel - 渲染工具类 - 目标对象类型（tClass）不能为空！");
-        Assert.isTrue(CollectionUtils.isNotEmpty(items), "Excel - 渲染工具类 - 数据集（items）不能为空！");
+        if (throwOnNoItems) {
+            Assert.isTrue(CollectionUtils.isNotEmpty(items), "Excel - 渲染工具类 - 数据集（items）不能为空！");
+        }
         // 重置，预防多次调用实例方法的情况
         this.currentCellIndex = 0;
         // 工作簿
@@ -94,6 +100,8 @@ public abstract class ExcelRender<A> {
             if (showTitleRow) {
                 row = sheet.createRow(firstRowIndex);
             }
+            //设置表头样式
+
             int cellIndex;
             A annotation;
             XSSFCell cell;
@@ -124,7 +132,7 @@ public abstract class ExcelRender<A> {
         }
         fillSheet(items, sheet);
         try {
-            return adaptCellWidth(workbook);
+            return workbook;
         } finally {
             this.reset();
         }
@@ -181,22 +189,6 @@ public abstract class ExcelRender<A> {
     }
 
     /**
-     * 列宽自适应
-     *
-     * @param workbook
-     * @return
-     */
-    private XSSFWorkbook adaptCellWidth(XSSFWorkbook workbook) {
-        workbook.forEach(sheet -> {
-            sheet.getRow(firstRowIndex).forEach((cell) -> {
-                cell.getSheet().autoSizeColumn(cell.getColumnIndex());
-            });
-        });
-        this.reset();
-        return workbook;
-    }
-
-    /**
      * 生成工作簿
      *
      * @return
@@ -228,6 +220,9 @@ public abstract class ExcelRender<A> {
      * @param <T>
      */
     private <T> void fillSheet(Collection<T> items, XSSFSheet sheet) {
+        if (CollectionUtils.isEmpty(items)) {
+            return;
+        }
         XSSFRow row;
         XSSFCell cell;
         Object cellVal;
@@ -247,6 +242,65 @@ public abstract class ExcelRender<A> {
                 }
             }
         }
+    }
+
+
+}
+```
+
+## Excel通用工具类
+
+```java
+package com.murphyl.utils.excel;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.util.function.Consumer;
+
+public class ExcelStyleUtils {
+
+    /**
+     * 列宽自适应
+     *
+     * @param workbook
+     * @return
+     */
+    public static final XSSFWorkbook adaptCellWidth(XSSFWorkbook workbook, int rowIndex) {
+        return processCellSettings(workbook, rowIndex, (cell) -> {
+            cell.getSheet().autoSizeColumn(cell.getColumnIndex());
+        });
+    }
+
+    /**
+     * 设置列宽
+     *
+     * @param workbook
+     * @return
+     */
+    public  static final XSSFWorkbook fixCellWidth(XSSFWorkbook workbook, int rowIndex, int width) {
+        return processCellSettings(workbook, rowIndex, (cell) -> {
+            cell.getSheet().setColumnWidth(cell.getColumnIndex(), width);
+        });
+    }
+
+    /**
+     * 针对首行所有单元格的处理逻辑
+     *
+     * @param workbook
+     * @param consumer
+     * @return
+     */
+    public  static final XSSFWorkbook processCellSettings(XSSFWorkbook workbook, int rowIndex, Consumer<Cell> consumer) {
+        workbook.forEach(sheet -> {
+            sheet.getRow(rowIndex).forEach((cell) -> {
+                if (cell == null) {
+                    return;
+                }
+                consumer.accept(cell);
+            });
+        });
+        return workbook;
     }
 
 }

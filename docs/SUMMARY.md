@@ -2,6 +2,14 @@
 
 * [首页](README.md)
 
+## DevOps
+
+* [标准和规范](devops/standard-spec/README.md)
+    * [语义化版本](devops/core/semantic-versioning.md)
+
+## Windows
+
+
 ## Core Java
 
 * [基础](core-java/core/README.md)

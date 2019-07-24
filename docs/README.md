@@ -8,3 +8,5 @@
 1. 其他基础知识，编程语言、网络方面、数据库、数据结构和算法。
 1. 中间件相关知识，如Redis、RabbitMQ、Dubbo等。
 1. 服务器相关知识，如Tomcat、Jetty等。
+
+[程序员的自我修养](https://legacy.gitbook.com/book/leohxj/a-programmer-prepares/details)

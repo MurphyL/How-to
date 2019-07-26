@@ -4,13 +4,13 @@ description: 语义化版本
 
 ## 语义化版本
 
-版本格式：主版本号.次版本号.修订号
+> MAJOR_VERSION.MINOR_VERSION.PATCH_VERSION
 
 版本号递增规则如下：
 
-- 主版本号（MAJOR）：当你做了不兼容的API 修改；
-- 次版本号（MINOR）：当你做了向下兼容的功能性新增；
-- 修订号（PATCH）：当你做了向下兼容的问题修正。
+- MAJOR VERSION：主版本号，当你做了不兼容的API 修改；
+- MINOR VERSION：次版本号，当你做了向下兼容的功能性新增；
+- PATCH VERSION：修订版本号，当你做了向下兼容的问题修正。
 
 ## 参考资料
 

@@ -1,5 +1,5 @@
 ---
-description: 语义化版本
+description: 基础标准与规范
 ---
 
 ## 语义化版本
@@ -14,4 +14,4 @@ description: 语义化版本
 
 ## 参考资料
 
-- [Semantic Versioning 2.0.0](https://semver.org/)
+- [语义化版本 2.0.0 - Semantic Versioning 2.0.0](https://semver.org/)
